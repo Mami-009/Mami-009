@@ -1,169 +1,105 @@
 @charset "UTF-8";
-
-html, body {
-    height: 100%; /* ページ全体の高さを指定 */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('1000003525.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-    text-align: center;
-}
-
+/* CSS Document */
 body {
+    background-color: #f0e69d;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* h1にアニメーションを適用 */
+h1 {
+    color: #cc8e1c;
+    text-align: center;
+    animation: float 3s ease-in-out infinite; /* アニメーションを適用 */
+}
+
+/* アニメーションの定義 */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* 上に10px移動 */
+    100% { transform: translateY(0); }
+}
+
+img {
     display: flex;
-    flex-direction: column; /* 縦方向に要素を並べる */
-}
-
-header, footer {
-    background: url('1000002035.jpg') no-repeat center center;
-    background-color: #deb8b6;
-    background-size: cover;
-    color: #333;
-    padding: 2rem 0;
-}
-
-header h1 {
-    margin-bottom: 1.5rem; /* h1とpの間の隙間を増やす */
-}
-
-header p {
-    margin-top: 0; /* pタグの上の余白をリセット（必要に応じて） */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 h2 {
-    font-size: 2rem;
-    color: #333;
+    color: #cc8e1c;
     text-align: center;
 }
 
-section {
-    padding: 2rem;
-    flex: 1; /* セクションをページの残りの高さに広げる */
-}
-
-/* Skillsセクションの背景色を変更 */
-.skills {
-    background-color: #deb8b6; /* 半透明の白背景 */
-    color: #333;
-    padding: 2rem;
-}
-
-
-.skills ul {
-    list-style: none; /* リストの点を消す */
-    padding: 0;
+p {
+    color: #483c3c;
+    font-size: 16px;
+    text-align: center;
     margin: 0;
 }
 
-.skills li {
-    display: flex; /* アイテムを横並びにする */
-    justify-content: space-between; /* テキストと星を左右に配置 */
-    align-items: center; /* 縦方向の中央揃え */
-    padding: 0.5rem 0; /* 各リストアイテムの上下に余白を追加 */
-    margin-bottom: 1rem; /* リストアイテム同士の間隔を広げる */
+/* 画像のスタイル */
+.image-container {
+    display: flex; /* フレックスボックスで横並びに */
+    justify-content: center; /* 中央揃え */
+    gap: 5px; /* 画像間のスペースを狭くする */
+    margin-top: 20px; /* 上部に余白を追加 */
 }
 
-.works {
-    background-color: #b7b7b7; /* 半透明の白背景 */
-    color: #333;
-    padding: 2rem;
+.image-container img {
+    border: 2px solid #ccc; /* 画像に枠線を追加（任意） */
+    border-radius: 8px; /* 角を丸くする（任意） */
 }
 
-/* Worksセクションのスタイル */
-section ul {
-    padding: 0;
-    margin: 0;
+
+ul {
+    list-style-type: none; /* デフォルトのリストスタイルを削除 */
+    padding: 0; /* パディングを削除 */
 }
 
-section li {
-    text-align: left; /* テキストを左揃えにする */
-    margin-bottom: 1.5rem; /* リストアイテム同士の間隔を広げる */
-    line-height: 1.6; /* 行間を調整して読みやすくする */
+li {
+    margin: 5px 0; /* 各リストアイテムの上下に余白を追加 */
+    color: #483c3c; /* テキストの色 */
+    font-size: 16px; /* フォントサイズ */
+    text-align: center; /* 中央揃え */
+    padding: 5px; /* パディングを追加 */
 }
 
-.project-buttons {
-    display: flex;
-    flex-wrap: wrap; /* ボタンを折り返し可能にする */
-    gap: 1rem; /* ボタン間の隙間を設定 */
-    justify-content: center; /* ボタンを中央揃えにする */
-    margin-top: 1rem; /* 上部に余白を追加 */
+p {
+    margin: 0; /* マージンを削除 */
+    padding: 5px; /* パディングを追加 */
+    color: #483c3c; /* テキストの色 */
+    font-size: 16px; /* フォントサイズ */
+    text-align: center; /* 中央揃え */
 }
 
-.button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #7c7070; /* ボタンの背景色 */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px; /* ボタンの角を丸くする */
-    font-size: 1rem;
-    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+a {
+    color: #ffff; /* リンクの色 */
+    text-decoration: none; /* 下線を削除 */
+    font-weight: bold; /* 太字にする */
+    font-size: 16px; /* フォントサイズ */
+    text-align: center; /* 中央揃え */
+    display: block; /* ブロック要素にする */
+    margin: 5px 0; /* 上下に余白を追加 */
+    padding: 20px; /* パディングを追加 */
+    border-radius: 5px; /* 角を丸くする */
+    background-color: #cc8e1c; /* 背景色を設定 */
+    transition: background-color 0.3s; /* ホバー時の背景色変更にトランジションを追加 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    cursor: pointer; /* カーソルをポインターに変更 */ 
+    width: 28%; /* 幅を28%に設定 */
+    margin: 0 auto 80px; /* 中央揃え */
 }
 
-.button:hover {
-    background-color: #a06545; /* ホバー時の背景色 */
-}
-
-.contact {
-    background-color: #f4f4f4; /* 背景色を設定 */
-    padding: 2rem;
-    border-radius: 10px; /* 角を丸くする */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
-    margin: 2rem auto;
-    max-width: 600px; /* フォームの最大幅を設定 */
-}
-
-.contact h2 {
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* 各フォーム要素の間隔を設定 */
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #9a9494; /* フォーカス時のボーダー色 */
-    outline: none;
-}
-
-.button {
-    background-color: #807d7d; /* ボタンの背景色 */
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #9a9494; /* ホバー時の背景色 */
+/* フッターのスタイル */
+footer {
+    background-color: #cc8e1c; /* フッターの背景色 */
+    color: white; /* フッターのテキスト色 */
+    text-align: center; /* テキストを中央揃え */
+    padding: 20px; /* フッターのパディング */
+    position: fixed; /* フッターを固定 */
+    bottom: 0; /* 下部に配置 */
+    width: 100%; /* 幅を100%に設定 */
+    margin-left: -30px; /* 左に30px移動 */
 }
